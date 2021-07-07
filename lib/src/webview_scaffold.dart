@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -96,6 +97,8 @@ class _WebviewScaffoldState extends State<WebviewScaffold> {
       if (!mounted) {
         return;
       }
+      
+      log('webviewReference on back listen');
 
       // The willPop/pop pair here is equivalent to Navigator.maybePop(),
       // which is what's called from the flutter back button handler.
